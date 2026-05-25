@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from typing import Optional, List
 from solver.sandbox import RunResult
 from solver.config import settings
 
@@ -33,7 +34,7 @@ class JudgeResult:
             return f"用例 {self.case_idx + 1}: {self.status} ({self.elapsed_ms}ms)"
 
 
-def judge(run_results: list[RunResult], test_cases: list, time_limit_sec: int | None = None) -> list[JudgeResult]:
+def judge(run_results: List[RunResult], test_cases: list, time_limit_sec: Optional[int] = None) -> List[JudgeResult]:
     limit_ms = (time_limit_sec or settings.time_limit_sec) * 1000
     results = []
     for i, (run, tc) in enumerate(zip(run_results, test_cases)):

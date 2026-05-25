@@ -28,8 +28,8 @@ def main():
 
     # --- Load config ---
     from solver.config import settings
-    if not settings.google_api_key:
-        print("[错误] 未设置 GOOGLE_API_KEY，请先复制 .env.example 为 .env 并填入密钥。")
+    if not settings.deepseek_api_key:
+        print("[错误] 未设置 DEEPSEEK_API_KEY，请在 .env 中填入密钥。")
         sys.exit(1)
 
     # --- Read problem ---

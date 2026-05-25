@@ -1,0 +1,16 @@
+[
+  {
+    "case": 0,
+    "status": "AC",
+    "actual": "5 4 3 2 1",
+    "expected": "5 4 3 2 1",
+    "elapsed_ms": 125
+  },
+  {
+    "case": 1,
+    "status": "AC",
+    "actual": "10",
+    "expected": "10",
+    "elapsed_ms": 94
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "title": "300以内的水仙花数",
+  "time_limit": 1,
+  "memory_limit": 256,
+  "constraints": [
+    "数字范围：1 到 300"
+  ],
+  "input_format": "无输入",
+  "output_format": "按升序输出所有水仙花数，每个数占一行",
+  "test_cases": [
+    {
+      "input": "",
+      "output": "1\n153\n"
+    }
+  ]
+}

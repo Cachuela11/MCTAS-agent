@@ -19,8 +19,8 @@ Rules:
 
 
 def generate_code(spec: ProblemSpec) -> str:
-    model = create_model(settings.google_model, settings.google_api_key)
-    agent = Agent(model=model, system_prompt=CODER_SYSTEM, markdown=False)
+    model = create_model(settings.deepseek_model, settings.deepseek_api_key)
+    agent = Agent(model=model, instructions=CODER_SYSTEM, markdown=False)
 
     prompt = f"Solve the following problem:\n\n```json\n{json.dumps(spec.to_dict(), indent=2)}\n```"
     response = agent.run(prompt)

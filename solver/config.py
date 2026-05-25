@@ -1,17 +1,13 @@
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    google_api_key: str = ""
-    google_model: str = "gemini-2.0-flash"
+    deepseek_api_key: str = ""
+    deepseek_model: str = "deepseek-chat"
     time_limit_sec: int = 10
     memory_limit_mb: int = 256
 
-    model_config = {"env_prefix": ""}
-
-    class Config:
-        env_file = ".env"
-        env_file_encoding = "utf-8"
+    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", env_prefix="")
 
 
 settings = Settings()

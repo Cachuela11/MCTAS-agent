@@ -1,0 +1,21 @@
+{
+  "title": "翻转一维链表",
+  "time_limit": 1,
+  "memory_limit": 256,
+  "constraints": [
+    "链表的长度 n 满足 1 ≤ n ≤ 10^5",
+    "结点的值 val 满足 -10^9 ≤ val ≤ 10^9"
+  ],
+  "input_format": "第一行输入一个整数 n，表示链表的长度。\n第二行输入 n 个整数，表示链表的各个结点的值，以空格分隔。",
+  "output_format": "输出翻转后的链表各结点的值，以空格分隔。",
+  "test_cases": [
+    {
+      "input": "5\n1 2 3 4 5\n",
+      "output": "5 4 3 2 1"
+    },
+    {
+      "input": "1\n10\n",
+      "output": "10"
+    }
+  ]
+}

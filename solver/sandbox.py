@@ -3,6 +3,7 @@ import tarfile
 import time
 import threading
 from dataclasses import dataclass
+from typing import Optional
 
 from solver.config import settings
 
@@ -45,7 +46,7 @@ def _make_tar(filename: str, content: str) -> bytes:
     return buf.getvalue()
 
 
-def run_in_sandbox(code: str, test_cases: list, time_limit_sec: int | None = None) -> list[RunResult]:
+def run_in_sandbox(code: str, test_cases: list, time_limit_sec: Optional[int] = None) -> list:
     """
     Run `code` against each test case in a fresh Docker container.
     Returns a RunResult per test case.

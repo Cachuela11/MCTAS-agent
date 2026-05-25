@@ -29,8 +29,8 @@ Rules:
 
 
 def parse_problem(problem_text: str) -> ProblemSpec:
-    model = create_model(settings.google_model, settings.google_api_key)
-    agent = Agent(model=model, system_prompt=PARSER_SYSTEM, markdown=False)
+    model = create_model(settings.deepseek_model, settings.deepseek_api_key)
+    agent = Agent(model=model, instructions=PARSER_SYSTEM, markdown=False)
 
     response = agent.run(problem_text)
     raw = response.content if hasattr(response, "content") else str(response)

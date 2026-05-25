@@ -3,6 +3,7 @@ import threading
 from dataclasses import dataclass, field
 from pathlib import Path
 from datetime import datetime
+from typing import Optional
 
 
 @dataclass
@@ -32,7 +33,7 @@ class SolverDB:
 
     def __init__(self, base_dir: str = "results"):
         self._base = Path(base_dir)
-        self._root: Path | None = None
+        self._root: Optional[Path] = None
         self._lock = threading.Lock()
 
     def create_session(self, title: str) -> str:
